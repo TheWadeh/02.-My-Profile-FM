@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: hsl(0, 0%, 8%);
+        text-align: center;
+        font-family: "Arial", sans-serif;
+      }
+
+      .container {
+        width: 18rem;
+        height: 26rem;
+        background-color: hsl(0, 0%, 12%);
+        border-radius: 1rem;
+        padding: 1.45rem 1rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+      }
+
+      h1,
+      h5,
+      p {
+        color: white;
+      }
+
+      h1 {
+        font-size: 20px;
+        margin-bottom: -0.2rem;
+      }
+
+      h5 {
+        font-weight: 500;
+      }
+
+      p {
+        margin-top: 0.3rem;
+        color: hsl(75, 94%, 57%);
+        font-size: 14px;
+      }
+
+      aside {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 0.7rem;
+      }
+
+      button {
+        background-color: hsl(0, 0%, 20%);
+        border-radius: 0.7rem;
+        padding: 7px;
+        font-weight: 700;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: hsl(75, 94%, 57%);
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="My Photo.jpg" alt="My Photo" />
+      <nav id="names">
+        <h1>Abdulfetah Jemal</h1>
+        <p>Adama, Ethiopia</p>
+      </nav>
+      <h5>Full Stack Developer | Python Programmer</h5>
+      <aside>
+        <button onclick="window.location.href='https://github.com/TheWadeh'">
+          Github
+        </button>
+        <button
+          onclick="window.location.href='https://www.frontendmentor.io/profile/TheWadeh'"
+        >
+          Frontend Mentor
+        </button>
+        <button onclick="window.location.href='www.google.com'">
+          Linkedin
+        </button>
+        <button onclick="window.location.href='www.google.com'">Twitter</button>
+        <button onclick="window.location.href='www.google.com'">
+          Instagram
+        </button>
+      </aside>
+    </div>
+  </body>
+</html>
