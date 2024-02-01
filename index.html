@@ -5,12 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Wadeh : Profile</title>
     <style>
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes color-change {
+        0% {
+          color: white;
+          background-color:rgb(75, 92, 98);
+          border-radius:.4rem;
+        }
+        50% {
+          color: hsl(75, 94%, 57%);
+        }
+        100% {
+          color: white;
+        }
+      }
+
+      @keyframes colors-change {
+        0% {
+          color: white;
+        }
+        30% {
+          color: rgb(82, 82, 36);
+        }
+        70% {
+          color: rgb(130, 191, 130);
+        }
+        90% {
+          color: rgb(153, 153, 163);
+        }
+        100% {
+          color: white;
+        }
+      }
       * {
         box-sizing: border-box;
+        /* animation:fadeIn .5s; */
       }
 
       body {
-        display: flex;
+        display: flex;hsl(75, 94%, 57%);
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -40,13 +81,16 @@
         border-radius: 1rem;
         padding: 1.45rem 1rem;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        position:relative;
+        position: relative;
+        /* animation:fadeIn 2s; */
+        animation:colors-change 1s;
       }
 
       img {
         width: 70px;
         height: 70px;
         border-radius: 50%;
+        animation: fadeIn 4s;
       }
 
       h1,
@@ -58,18 +102,28 @@
       h1 {
         font-size: 20px;
         margin-bottom: -0.2rem;
+        animation: fadeIn 2.2s;
+      }
+
+      #names h1 {
+        animation: color-change 3s;
       }
 
       h5 {
         font-size: 12px;
         font-weight: 600;
         letter-spacing: 0.2px;
+        /* animation:color-change 5s; */
       }
 
       p {
         margin-top: 0.3rem;
         color: hsl(75, 94%, 57%);
         font-size: 14px;
+        animation: fadeIn 5s;
+      }
+      h5 {
+        /* animation: colors-change 3s; */
       }
 
       aside {
@@ -87,20 +141,23 @@
         color: white;
         border: none;
         cursor: pointer;
+        animation: fadeIn 4s;
       }
-
+      #buttons {
+        animation: fadeIn 5s;
+      }
       button:hover {
         background-color: hsl(75, 94%, 57%);
         color: black;
       }
 
       #btn {
-        width:30px;
-        height:30px;
-        position:absolute;
-        top:5px;
-        right:5px;
-        background-color:hsl(0, 0%, 12%);
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background-color: hsl(0, 0%, 12%);
       }
       #btn:hover {
         background-color: hsl(75, 94%, 57%);
@@ -109,8 +166,10 @@
   </head>
   <body>
     <h1>Hey👋 ... this is AJ</h1>
-    <P>If you wanna see my social media profiles...</P>
-    <button class="btn" onclick="openModal()">Click Here 👌</button>
+    <p>If you wanna see my social media profiles...</p>
+    <button class="btn" onclick="openModal()" id="buttons">
+      Click Here 👌
+    </button>
     <div class="overlay">
       <div class="modal">
         <img src="My Photo.jpg" alt="My Photo" />
