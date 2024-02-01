@@ -87,10 +87,11 @@
         animation:colors-change 1s;
       }
       .animated-text {
-        font-size: 24px;
+        font-family:serif;
+        font-size: 20px;
         display: flex;
-        font-weight: 770;
-        letter-spacing: 1px;
+        font-weight: 900;
+        letter-spacing: .1px;
       }
 
       .animated-text span {
@@ -175,7 +176,7 @@
       h1 {
         font-size: 20px;
         margin-bottom: -0.2rem;
-        animation: fadeIn 2.2s;
+        animation: fadeIn 1s;
       }
 
       #names h1 {
@@ -232,6 +233,16 @@
       #btn:hover {
         background-color: hsl(75, 94%, 57%);
       }
+
+      .spanned {
+        color:red;
+      }
+
+      .the_design {
+        margin-top:2rem;
+        /* padding:2rem; */
+        color:white;
+      }
     </style>
   </head>
   <body>
@@ -257,8 +268,13 @@
 
     <p>If you wanna see my social media profiles...</p>
     <button class="btn" onclick="openModal()" id="buttons">
-      Click Here 👌
+      Click Here <span class="spanned">👌</span>
     </button>
+    <div class="the_design"> 
+      <button onclick="window.location.href='calculators.html'">
+        My Calculator Design 😎
+      </button>
+    </div>
     <div class="overlay">
       <div class="modal">
         <img src="My Photo.jpg" alt="My Photo" />
